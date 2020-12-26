@@ -24,7 +24,7 @@ func main() {
 	defer x.Close()
 	root := xproto.Setup(x).DefaultScreen(x).Root
 
-	config := util.ReadConfig("goblocks.json")
+	config := util.ReadConfig("goblocks/goblocks.json")
 	channels = make([]chan bool, len(config.Actions))
 	//recChannel is common for gothreads contributing to status bar
 	recChannel := make(chan util.Change)
